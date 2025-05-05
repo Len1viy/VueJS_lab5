@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Introduction</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="counter++">Click me</button>
+        <p>Количество кликов: {{ counter }}</p>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                counter: 0
+            }
+        });
+    </script>
+</body>
+</html> 

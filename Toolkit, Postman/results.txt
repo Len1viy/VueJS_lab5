@@ -1,0 +1,37 @@
+1. PixiJs Animation:
+   - Установлена библиотека PixiJs.
+   - Создана анимация вращения прямоугольника в файле animation.html.
+
+2. Axios GET Request to VK:
+   - Установлена библиотека Axios.
+   - GET-запрос к https://vk.com выполнен в Node.js.
+   - Получен HTML-контент страницы, так как VK не предоставляет API для публичного доступа.
+   - В браузере запросы блокируются из-за CORS.
+
+3. Axios GET Request to geoiplookup.io:
+   - GET-запрос к https://json.geoiplookup.io выполнен в Node.js.
+   - Получен JSON-ответ с информацией о геолокации.
+   - В браузере запросы успешны, так как API разрешает кросс-доменные запросы.
+
+4. Postman Installation:
+   - Postman установлен для выполнения API-запросов.
+
+5. GET Requests with Postman:
+   - GET-запрос к https://vk.com: Заголовки ответа показывают блокировку CORS.
+   - GET-запрос к https://json.geoiplookup.io: Заголовки ответа показывают разрешение CORS.
+
+6. POST Request to Fake API (Register):
+   - POST-запрос к https://reqres.in/api/register выполнен с использованием x-www-form-urlencoded.
+   - Получен ответ с ошибкой, если email не из списка заготовленных пользователей.
+
+7. POST Request to Fake API (Login):
+   - POST-запрос к https://reqres.in/api/login выполнен с использованием JSON.
+   - Получен ответ с токеном, если email из списка заготовленных пользователей.
+
+8. Project Configuration:
+   - Настроены конфигурации сборки: local, dev, prod.
+   - Используются .env файлы для хранения переменных среды.
+   - Установлена библиотека dotenv для загрузки переменных среды.
+   - Созданы файлы .env.local, .env.dev, .env.prod с соответствующими переменными.
+   - Пример использования переменных среды в коде добавлен в файл app.js.
+   - Пример запуска приложения с разными конфигурациями: NODE_ENV=local node app.js, NODE_ENV=dev node app.js, NODE_ENV=prod node app.js.

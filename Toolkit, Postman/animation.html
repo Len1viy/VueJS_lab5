@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixiJS Animation</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/pixi.js@8.0.0/dist/pixi.min.js"></script>
+<script>
+    const app = new PIXI.Application();
+    app
+    .init({ background: "#1099bb", resizeTo: window, hello: true })
+    .then(async () => {
+        document.body.appendChild(app.canvas);
+
+        const rect = new PIXI.Graphics()
+        .beginFill(0xFF0000)
+        .drawRect(0, 0, 100, 100)
+        .endFill();
+
+        rect.position.set(app.screen.width / 2, app.screen.height / 2);
+        rect.pivot.set(50, 50);
+        app.stage.addChild(rect);
+
+        app.ticker.add(() => rect.rotation += 0.01);
+    });
+</script>
+</body>
+</html> 
